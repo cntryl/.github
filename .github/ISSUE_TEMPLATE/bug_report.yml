@@ -1,0 +1,69 @@
+name: Bug report
+description: Report a reproducible problem affecting a cntryl project
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting a problem. Search existing issues first and do not include credentials, private data, or confidential information.
+  - type: textarea
+    id: context
+    attributes:
+      label: Why are you reporting this?
+      description: Explain how you encountered the problem, what project or workflow it affects, and why the outcome matters.
+      placeholder: I encountered this while...
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: Provide the smallest complete sequence, repository, or example that reproduces the behavior.
+      placeholder: |
+        1. Configure...
+        2. Run...
+        3. Observe...
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: Include exact errors, logs, or output where useful.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: Explain the behavior you expected and the basis for that expectation.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Include relevant versions, operating system, provider, configuration, or commit SHA.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Additional evidence
+      description: Add minimal logs, measurements, screenshots, or links that help verify the report. Remove secrets first.
+  - type: textarea
+    id: assistance
+    attributes:
+      label: Tool assistance disclosure
+      description: Describe any material AI or generative-tool assistance and how you verified it, or write "None".
+    validations:
+      required: true
+  - type: checkboxes
+    id: responsibility
+    attributes:
+      label: Reporter confirmation
+      options:
+        - label: I reviewed this report, distinguished observed results from assumptions, and can respond to follow-up questions.
+          required: true

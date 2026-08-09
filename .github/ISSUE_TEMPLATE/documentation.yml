@@ -1,0 +1,48 @@
+name: Documentation correction
+description: Report a specific documentation problem or propose a focused correction
+title: "[Docs]: "
+labels:
+  - documentation
+body:
+  - type: textarea
+    id: location
+    attributes:
+      label: Documentation location
+      description: Link the page or identify the exact file and section.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Why are you proposing this correction?
+      description: Explain what you were trying to accomplish, how the documentation affected you, and why a change is needed.
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Current problem
+      description: Identify what is incorrect, unclear, incomplete, or outdated and provide supporting evidence.
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: Suggested correction
+      description: Describe the intended correction. A finished rewrite is optional.
+    validations:
+      required: true
+  - type: textarea
+    id: assistance
+    attributes:
+      label: Tool assistance disclosure
+      description: Describe any material AI or generative-tool assistance and how you verified it, or write "None".
+    validations:
+      required: true
+  - type: checkboxes
+    id: responsibility
+    attributes:
+      label: Reporter confirmation
+      options:
+        - label: I checked the referenced documentation and can respond to questions about this correction.
+          required: true

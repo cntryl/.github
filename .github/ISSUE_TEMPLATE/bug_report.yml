@@ -1,26 +1,23 @@
 name: Bug report
-description: Report a reproducible problem affecting a cntryl project
+description: Report a problem affecting a cntryl project
 title: "[Bug]: "
-labels:
-  - bug
 body:
   - type: markdown
     attributes:
       value: |
-        Thank you for reporting a problem. Search existing issues first and do not include credentials, private data, or confidential information.
+        Search existing issues first. Do not include secrets or private information.
   - type: textarea
-    id: context
+    id: problem
     attributes:
-      label: Why are you reporting this?
-      description: Explain how you encountered the problem, what project or workflow it affects, and why the outcome matters.
-      placeholder: I encountered this while...
+      label: What happened?
+      description: Describe what you did, what happened, and what you expected instead. Include exact errors when useful.
     validations:
       required: true
   - type: textarea
     id: reproduction
     attributes:
       label: Reproduction
-      description: Provide the smallest complete sequence, repository, or example that reproduces the behavior.
+      description: Provide the smallest sequence or example that reproduces the problem. If it is intermittent, describe when it occurs.
       placeholder: |
         1. Configure...
         2. Run...
@@ -28,42 +25,19 @@ body:
     validations:
       required: true
   - type: textarea
-    id: actual
-    attributes:
-      label: Actual behavior
-      description: Include exact errors, logs, or output where useful.
-    validations:
-      required: true
-  - type: textarea
-    id: expected
-    attributes:
-      label: Expected behavior
-      description: Explain the behavior you expected and the basis for that expectation.
-    validations:
-      required: true
-  - type: textarea
     id: environment
     attributes:
       label: Environment
       description: Include relevant versions, operating system, provider, configuration, or commit SHA.
-    validations:
-      required: true
   - type: textarea
-    id: evidence
+    id: additional_context
     attributes:
-      label: Additional evidence
-      description: Add minimal logs, measurements, screenshots, or links that help verify the report. Remove secrets first.
+      label: Additional context
+      description: Add logs, measurements, screenshots, or links that help explain the problem.
   - type: textarea
     id: assistance
     attributes:
-      label: Tool assistance disclosure
-      description: Describe any material AI or generative-tool assistance and how you verified it, or write "None".
+      label: Tool assistance
+      description: Write "None" or briefly identify material AI or generative-tool assistance and how you reviewed its output.
     validations:
       required: true
-  - type: checkboxes
-    id: responsibility
-    attributes:
-      label: Reporter confirmation
-      options:
-        - label: I reviewed this report, distinguished observed results from assumptions, and can respond to follow-up questions.
-          required: true

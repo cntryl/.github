@@ -1,67 +1,27 @@
 name: Feature proposal
 description: Propose a change grounded in a concrete use case
 title: "[Feature]: "
-labels:
-  - enhancement
 body:
   - type: markdown
     attributes:
       value: |
-        Describe the need before proposing an implementation. Please wait for maintainer agreement before beginning substantial work.
+        Describe the need before proposing an implementation. For substantial work, wait for maintainer agreement before starting.
   - type: textarea
-    id: context
+    id: need
     attributes:
-      label: Why are you proposing this?
-      description: Explain your relationship to the use case, how the need arose, and what outcome matters.
-    validations:
-      required: true
-  - type: textarea
-    id: use_case
-    attributes:
-      label: Concrete use case
-      description: Show the workflow or limitation with a specific example.
-    validations:
-      required: true
-  - type: textarea
-    id: outcome
-    attributes:
-      label: Desired outcome
-      description: Describe the behavior or capability needed without assuming a particular implementation.
+      label: What do you need?
+      description: Describe the use case, current limitation, and desired outcome with a concrete example.
     validations:
       required: true
   - type: textarea
     id: proposal
     attributes:
       label: Proposed approach
-      description: Describe an approach if you have one, including likely scope and compatibility implications.
-  - type: textarea
-    id: alternatives
-    attributes:
-      label: Alternatives considered
-      description: Explain existing workarounds or other approaches and why they are insufficient.
-    validations:
-      required: true
-  - type: dropdown
-    id: implementation
-    attributes:
-      label: Are you planning to implement this?
-      options:
-        - No; I am proposing the need for discussion.
-        - Yes, after maintainer agreement on the scope and approach.
-        - I already have an implementation and can share it for review.
-    validations:
-      required: true
+      description: If you have an approach in mind, describe it along with alternatives or compatibility concerns.
   - type: textarea
     id: assistance
     attributes:
-      label: Tool assistance disclosure
-      description: Describe any material AI or generative-tool assistance and how you verified it, or write "None".
+      label: Tool assistance
+      description: Write "None" or briefly identify material AI or generative-tool assistance and how you reviewed its output.
     validations:
       required: true
-  - type: checkboxes
-    id: responsibility
-    attributes:
-      label: Proposer confirmation
-      options:
-        - label: I can explain this proposal and respond to maintainer questions about the use case and scope.
-          required: true

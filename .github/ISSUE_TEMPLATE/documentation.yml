@@ -1,10 +1,8 @@
 name: Documentation correction
-description: Report a specific documentation problem or propose a focused correction
+description: Report incorrect, unclear, incomplete, or outdated documentation
 title: "[Docs]: "
-labels:
-  - documentation
 body:
-  - type: textarea
+  - type: input
     id: location
     attributes:
       label: Documentation location
@@ -12,37 +10,16 @@ body:
     validations:
       required: true
   - type: textarea
-    id: context
-    attributes:
-      label: Why are you proposing this correction?
-      description: Explain what you were trying to accomplish, how the documentation affected you, and why a change is needed.
-    validations:
-      required: true
-  - type: textarea
-    id: problem
-    attributes:
-      label: Current problem
-      description: Identify what is incorrect, unclear, incomplete, or outdated and provide supporting evidence.
-    validations:
-      required: true
-  - type: textarea
     id: correction
     attributes:
-      label: Suggested correction
-      description: Describe the intended correction. A finished rewrite is optional.
+      label: What should change?
+      description: Explain the problem, what you needed from the documentation, and the correction you suggest.
     validations:
       required: true
   - type: textarea
     id: assistance
     attributes:
-      label: Tool assistance disclosure
-      description: Describe any material AI or generative-tool assistance and how you verified it, or write "None".
+      label: Tool assistance
+      description: Write "None" or briefly identify material AI or generative-tool assistance and how you reviewed its output.
     validations:
       required: true
-  - type: checkboxes
-    id: responsibility
-    attributes:
-      label: Reporter confirmation
-      options:
-        - label: I checked the referenced documentation and can respond to questions about this correction.
-          required: true
